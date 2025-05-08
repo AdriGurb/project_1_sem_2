@@ -25,7 +25,6 @@ def ozon(req, driver, df):
         time.sleep(1.5)
     
     # Собираем данные и парсим
-    from bs4 import BeautifulSoup
     html_text = driver.page_source
     soup = BeautifulSoup(html_text, "html.parser")
     items = soup.find_all('div', class_="jr8_25")
@@ -63,7 +62,6 @@ def yand(req, driver, df):
         driver.execute_script("window.scrollBy(0, -200)")
         time.sleep(1.9)
     
-    from bs4 import BeautifulSoup
     html_text = driver.page_source
     soup = BeautifulSoup(html_text, "html.parser")
     items = soup.find_all('div', class_="_1H-VK")
@@ -106,7 +104,6 @@ def wb(req, driver, df):
         driver.execute_script("window.scrollBy(0, -200)")
         time.sleep(1.9)
     
-    from bs4 import BeautifulSoup
     html_text = driver.page_source
     soup = BeautifulSoup(html_text, "html.parser")
     items = soup.find_all('article', class_='product-card')
